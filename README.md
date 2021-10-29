@@ -1,0 +1,1 @@
+This repository is meant to carry a random challenge concerning HTML, CSS and JS technology as means to practice my skills.git 
