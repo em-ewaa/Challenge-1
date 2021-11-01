@@ -4,21 +4,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Order Summary Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Order Summary</title>
 </head>
 <body>
-  <div>
+  <div class="bubble">
     <img src="./images/illustration-hero.svg" alt="Illustrated person enjoying our streaming service.">
-    <h1>Order Summary</h1>
-    <p>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
-    <div id="plan-box">
-      <img src="./images/icon-music.svg">
-      <h2>Annual Plan</h2>
-      <p>$59.99/year</p>
-      <a href="#" title="Change your Plan." id="change">Change</a>
+    <div class="container">
+      <h1>Order Summary</h1>
+      <p>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+      <div class="plan-box">
+        <img src="./images/icon-music.svg" height="48px" width="48px" class="music">
+        <div class="plan-text">
+          <h2>Annual Plan</h2>
+          <p>$59.99/year</p>
+        </div>
+        <div class="change">
+        <a href="#" title="Change your Plan.">Change</a>
+        </div>
+      </div>
+      <a href="#" title="Proceed to payment." class="payment">Proceed to Payment</a>
+      <a href="#" title="Cancel order." class="cancel">Cancel Order</a>
     </div>
-    <a href="#" title="Proceed to payment.">Proceed to Payment</a>
-    <a href="#" title="Cancel order.">Cancel Order</a>
   </div>
 </body>
 </html>
