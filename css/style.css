@@ -48,14 +48,6 @@ p, a {
   font-size: 1.6em;
 }
 
-a:link:not(#change), 
-a:visited:not(#change), 
-a:active  {
-  /* color:hsl(245, 75%, 52%); */
-  text-decoration: none;
-  font-weight: 900;
-}
-
 .plan-box {
   background-color: var(--v-pale-blue);
   border-radius: 15px;
@@ -74,14 +66,12 @@ a:active  {
   grid-area: music;
 }
 .plan-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  text-align: left;
   grid-area: text;
 }
 
 .plan-text > * {
-  margin: 6px 0;
+  margin: 10px 0;
 }
 
 .change {
@@ -100,7 +90,27 @@ a:active  {
   margin: 30px 0 35px 0;
   box-shadow: 0px 20px 40px -10px var(--des-blue)
 }
-
 .cancel {
   color: var(--des-blue);
+}
+
+a:link:not(#change),
+a:hover:not(#change),
+a:active:not(#change)  {
+  text-decoration: none;
+  font-weight: 900;
+}
+#change:visited {
+  color: var(--dark-blue);
+}
+.payment:hover {
+  background-color: var(--des-blue);
+}
+
+.cancel:hover {
+  color: var(--dark-blue)
+}
+
+a {
+  transition: all .2s ease-in;
 }
