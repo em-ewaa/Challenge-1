@@ -6,7 +6,7 @@
   --dark-blue: hsl(223, 47%, 23%);
 }
 * {
-  border: 1px red solid;
+  /* border: 1px red solid; */
 }
 body {
   box-sizing: border-box;
@@ -15,19 +15,19 @@ body {
   text-align: center;
   background: no-repeat url("/Challenge-1/images/pattern-background-desktop.svg") var(--pale-blue);
   margin: 0;
-  padding: 0;
+  padding: 70px 0;
 }
 
 .bubble {
   background-color: #fff;
   width: 450px;
   margin: 0 auto;
-  border-radius: 20px;
+  border-radius: 15px;
   overflow: hidden;
   box-shadow: 0px 10px 70px -30px var(--des-blue);
 }
 .container {
-  padding: 0 45px;
+  padding: 20px 45px 40px 45px;
 }
 h1, h2 {
   font-weight: 900;
@@ -36,18 +36,24 @@ h1, h2 {
 
 h1 {
   font-size: 2.8em;
-  padding: 20px 10px 10px 10px;
 }
 h2 {
-  font-size: 1.8em;
+  font-size: 1.7em;
+  white-space: nowrap;
+}
+h1 + p {
+  padding: 10px 0;
 }
 p, a {
   font-size: 1.6em;
 }
 
-a:link, a:visited, a:hover, a:active {
+a:link:not(#change), 
+a:visited:not(#change), 
+a:active  {
   /* color:hsl(245, 75%, 52%); */
-  font-weight: 700;
+  text-decoration: none;
+  font-weight: 900;
 }
 
 .plan-box {
@@ -61,17 +67,40 @@ a:link, a:visited, a:hover, a:active {
   column-gap: 15px;
   place-items: center right;
   line-height: 15px;
+  padding: 20px 0;
+  margin: 20px 0;
 }
 .music {
   grid-area: music;
 }
 .plan-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   grid-area: text;
-  justify-self: center;
-  
 }
+
+.plan-text > * {
+  margin: 6px 0;
+}
+
 .change {
   grid-area: change;
   justify-self: right;
-  padding: 0 20px;
+  padding: 0 30px;
+  font-weight: 700;
+}
+
+.payment {
+  padding: 15px 30px;
+  display: block;
+  color: #fff;
+  background-color: var(--bright-blue);
+  border-radius: 10px;
+  margin: 30px 0 35px 0;
+  box-shadow: 0px 20px 40px -10px var(--des-blue)
+}
+
+.cancel {
+  color: var(--des-blue);
 }
