@@ -4,91 +4,98 @@
   --v-pale-blue: hsl(225, 100%, 98%);
   --des-blue: hsl(224, 23%, 55%);
   --dark-blue: hsl(223, 47%, 23%);
+  font: 10px/25px 'Red Hat Display', sans-serif;
 }
-* {
-  /* border: 1px red solid; */
-}
+/* * {
+  border: 1px red solid;
+} */
 body {
   box-sizing: border-box;
-  font: 10px/25px 'Red Hat Display', sans-serif;
   color: var(--des-blue);
   text-align: center;
-  background: no-repeat url("/Challenge-1/images/pattern-background-desktop.svg") var(--pale-blue);
+  background: no-repeat center url("/Challenge-1/images/pattern-background-desktop.svg") var(--pale-blue);
   margin: 0;
-  padding: 70px 0;
 }
 
 .bubble {
   background-color: #fff;
-  width: 450px;
-  margin: 0 auto;
-  border-radius: 15px;
+  max-width: 450px;
+  margin: 20% auto;
+  border-radius: 2em;
   overflow: hidden;
-  box-shadow: 0px 10px 70px -30px var(--des-blue);
+  box-shadow: 0 1em 7em -3em var(--des-blue);
+}
+.music-guy {
+  width: 100%;
 }
 .container {
-  padding: 20px 45px 40px 45px;
+  padding: 5% 10% 10% 10%;
 }
 h1, h2 {
   font-weight: 900;
   color: var(--dark-blue);
 }
-
 h1 {
   font-size: 2.8em;
+  padding: 2rem 0;
+  margin: 0;
 }
 h2 {
   font-size: 1.7em;
   white-space: nowrap;
 }
-h1 + p {
-  padding: 10px 0;
+.text {
+  font-size: 1.6em;
+  max-width: 360px;
+  padding: .5rem 0;
+  margin: 0 auto;
 }
-p, a {
+p {
   font-size: 1.6em;
 }
-
 .plan-box {
   background-color: var(--v-pale-blue);
-  border-radius: 15px;
+  border-radius: 1.2em;
   display: grid;
   grid-template-areas:
     "music text change"
     "music text change";
   grid-template-columns: 1fr 1fr 2fr;
-  column-gap: 15px;
   place-items: center right;
-  line-height: 15px;
-  padding: 20px 0;
-  margin: 20px 0;
+  line-height: 1em;
+  padding: 4% 0;
+  margin: 1.5em 0;
 }
 .music {
   grid-area: music;
+  padding: 0 1.5em;
 }
 .plan-text {
   text-align: left;
   grid-area: text;
 }
-
 .plan-text > * {
-  margin: 10px 0;
+  margin: 1em .5em;
 }
-
 .change {
   grid-area: change;
   justify-self: right;
-  padding: 0 30px;
+  padding: 0 2.5em 0 0;
   font-weight: 700;
 }
-
+a {
+  font-size: 1.5em;
+}
 .payment {
-  padding: 15px 30px;
+  padding: .8em 3em;
   display: block;
   color: #fff;
   background-color: var(--bright-blue);
-  border-radius: 10px;
-  margin: 30px 0 35px 0;
-  box-shadow: 0px 20px 40px -10px var(--des-blue)
+  border-radius: .8em;
+  margin: 2em 0 2em 0;
+  box-shadow: 0 2em 3em -1.2em var(--des-blue);
+  white-space: nowrap;
+
 }
 .cancel {
   color: var(--des-blue);
@@ -100,9 +107,6 @@ a:active:not(#change)  {
   text-decoration: none;
   font-weight: 900;
 }
-#change:visited {
-  color: var(--dark-blue);
-}
 .payment:hover {
   background-color: var(--des-blue);
 }
@@ -113,4 +117,38 @@ a:active:not(#change)  {
 
 a {
   transition: all .2s ease-in;
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    background-image: url("/Challenge-1/images/pattern-background-mobile.svg");
+  }
+  .bubble {
+  margin: 20% 7%;
+  }
+  .container {
+    padding: 5% 8% 10% 8%;
+  }
+  h1 {
+    font-size: 2.2em;
+    padding: .5em;
+  }
+  .text {
+    min-width: 263px;
+  }
+  h2, p {
+    font-size: 1.5em;
+  }
+  a {
+    font-size: 1.4em;
+  }
+  .plan-text > * {
+    margin: .8em .5em;
+  }
+  .change {
+    padding: 0 1.7em 0 0;
+  }
+  .payment {
+    padding: .9em 3em;
+  }
 }
