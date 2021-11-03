@@ -6,9 +6,7 @@
   --dark-blue: hsl(223, 47%, 23%);
   font: 10px/25px 'Red Hat Display', sans-serif;
 }
-/* * {
-  border: 1px red solid;
-} */
+
 body {
   box-sizing: border-box;
   color: var(--des-blue);
@@ -20,7 +18,7 @@ body {
 .bubble {
   background-color: #fff;
   max-width: 450px;
-  margin: 20% auto;
+  margin: 10rem auto;
   border-radius: 2em;
   overflow: hidden;
   box-shadow: 0 1em 7em -3em var(--des-blue);
@@ -34,6 +32,7 @@ body {
 h1, h2 {
   font-weight: 900;
   color: var(--dark-blue);
+  white-space: nowrap;
 }
 h1 {
   font-size: 2.8em;
@@ -85,6 +84,7 @@ p {
 }
 a {
   font-size: 1.5em;
+  white-space: nowrap;
 }
 .payment {
   padding: .8em 3em;
@@ -112,7 +112,7 @@ a:active:not(#change)  {
 }
 
 .cancel:hover {
-  color: var(--dark-blue)
+  color: var(--dark-blue);
 }
 
 a {
@@ -120,35 +120,27 @@ a {
 }
 
 @media only screen and (max-width: 480px) {
+  :root {
+    font: 8px/25px 'Red Hat Display', sans-serif;
+  }
   body {
     background-image: url("/Challenge-1/images/pattern-background-mobile.svg");
   }
   .bubble {
-  margin: 20% 7%;
-  }
-  .container {
-    padding: 5% 8% 10% 8%;
-  }
-  h1 {
-    font-size: 2.2em;
-    padding: .5em;
+    min-width: 320px;
+    max-width: 335px;
   }
   .text {
-    min-width: 263px;
+    min-width: 265px;
+    max-width: 270px;
   }
-  h2, p {
-    font-size: 1.5em;
+  .text {
+    font-size: 16px;
+  }
+  .plan-text p, #change {
+    font-size: 14px;
   }
   a {
-    font-size: 1.4em;
+    font-size: 15px;
   }
-  .plan-text > * {
-    margin: .8em .5em;
   }
-  .change {
-    padding: 0 1.7em 0 0;
-  }
-  .payment {
-    padding: .9em 3em;
-  }
-}
