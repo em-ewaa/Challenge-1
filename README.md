@@ -48,6 +48,7 @@ Users should be able to:
   border-radius: 2em;
   overflow: hidden;
 }
+```
 
 - To prevent text from wrapping:
 
@@ -86,7 +87,7 @@ a {
 }
 ```
 
-To adjust the design for mobile devices I mostly used em, rem and % and change ratio via @media queries:
+- To adjust the design for mobile devices I mostly used em, rem and % and change ratio via @media queries:
 
 ```css
 @media only screen and (max-width: 480px) {
