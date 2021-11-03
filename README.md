@@ -48,6 +48,7 @@ Users should be able to:
   border-radius: 2em;
   overflow: hidden;
 }
+```
 
 - To prevent text from wrapping:
 
